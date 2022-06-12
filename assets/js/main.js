@@ -60,9 +60,11 @@ CPFvalidator.prototype.IsSequence = function(){
 
 const IsValidFiels = () => document.querySelector("#cpf-input").reportValidity();
 
-const verify = () => {
+const verify = event => {
     const value = document.querySelector("#cpf-input").value;
     const cpf = new CPFvalidator(value.toString());
+
+    event.preventDefault();
 
     if(cpf.valid() && IsValidFiels()){
         

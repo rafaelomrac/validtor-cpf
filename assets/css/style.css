@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 6%;
+    background-color: #EDED;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background: linear-gradient(rgba(0, 3, 196, 0.6), rgba(104, 128, 235, 0.6));
+}
+
+
+form{
+    width: 30rem;
+    height: 20rem;
+    padding: .5rem;
+    background-color: rgba(24, 24, 24, 0.486);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form .title h2{
+    color: #FFF;
+}
+
+form input{
+    width: 100%;
+    height: 3rem;
+    outline: 0;
+    
+}
+
+form input[type=number]::-webkit-inner-spin-button, 
+form input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+form input:focus{
+    border: 1px solid #1acc79;
+}
+
+form input::placeholder{
+    text-align: center;
+    font-size: 1rem;
+}
+
+form label{
+    opacity: 0;
+    text-indent: -9990px;
+    margin: 0;
+    width: 0;
+}
+
+span{
+    text-transform: uppercase;
+    position: relative;
+    color: #FFF4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    line-height: .70rem;
+    outline: 0;
+    animation: textAnimation 5s linear infinite;
+
+}
+
+@keyframes textAnimation {
+    0%, 18%, 20%, 50.1%, 60.1%, 80%, 90.1%, 92%{
+        color: #FFF4;
+        text-shadow: none;
+
+    }
+     18.1%, 20.1%, 30%, 50.1%, 60%, 65%, 80.1%, 90%, 92.1%, 100%{
+        color: #FFF;
+        text-shadow: 0 0 10px #03BCF4,
+        0 0 10px #03BCF4, 0 0 20px #03BCF4, 0 0 40px #03BCF4, 0 0 160px #03BCF4;
+    }
+}
+
+
+button{
+    outline: 0;
+    width: 100%;
+    height: 3rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: aliceblue;
+    border: none;
+    background: linear-gradient(rgba(9, 11, 117, 0.6), rgba(104, 128, 235, 0.6));
+    transition: all .4s ease-in;
+
+}
+
+
+button:hover{
+    background: rgba(0, 3, 196, 0.6)
+}
+
+ul li{
+    list-style: none;
+    color: #FFF;
+}
+
+@media (max-width: 800px) {
+    form{
+        width: 20rem;
+        height: 20rem;
+        padding: .5rem;
+        background-color: rgba(24, 24, 24, 0.486);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
